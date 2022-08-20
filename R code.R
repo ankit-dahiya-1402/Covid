@@ -2,8 +2,7 @@
 rm(list = ls())
 
 
-#  We have Covid dataset and we want to 
-# answer some of the cliams that people are making about it.
+#  We have Covid dataset and we want to answer some of the cliams that people are making about it.
 
 
 # First we will import data set.
@@ -50,18 +49,14 @@ mean(alive$age, na.rm = TRUE) # 48.0 yr
 
 # Is this claim is statistically significant ?
 
-t.test(dead$age,alive$age,alternative = "two.sided",
-       conf.level = 0.95 )
+t.test(dead$age,alive$age,alternative = "two.sided",conf.level = 0.95 )
 #95% confidence: people who are died were 17 to 24 yr older than alive
 
-t.test(dead$age,alive$age,alternative = "two.sided",
-       conf.level = 0.99 )
+t.test(dead$age,alive$age,alternative = "two.sided",conf.level = 0.99 )
 #99% confidence: people who are died were 15.5 to 25.5 yr older than alive
 
 
-# Normally, if p-value < 0.05, we reject null hypothesis
-# here p-value=2.2e-16 ~ 0, so we reject null hypothesis
-# conclude that data is statistically significant.
+# Normally, if p-value < 0.05, we reject null hypothesis. Here p-value=2.2e-16 ~ 0, so we reject null hypothesis and conclude that data is statistically significant.
 
 
 
@@ -75,20 +70,16 @@ mean(male$death_dummy, na.rm = TRUE) # 8.5% death rate
 
 # Is this claim is statistically significant ?
 
-t.test(male$death_dummy,female$death_dummy,alternative = "two.sided",
-       conf.level = 0.95 )
+t.test(male$death_dummy,female$death_dummy,alternative = "two.sided",conf.level = 0.95 )
 #95% confidence: men have from 1.7% to 7.8% higher chances of dying
 
-t.test(male$death_dummy,female$death_dummy,alternative = "two.sided",
-       conf.level = 0.99 )
+t.test(male$death_dummy,female$death_dummy,alternative = "two.sided",conf.level = 0.99 )
 #99% confidence: men have from 0.8% to 8.8% higher chances of dying
 
 # p-value = 0.002 < 0.05, so this is statistically significant
 
 
-# Conclusion : Old are dying more then younger one's and 
-#              MALE are more vulnerable the FEAMLE.
-#              Old MALE requires more attention and care.
+# Conclusion : Old are dying more then younger one's and MALE are more vulnerable the FEAMLE. Old MALE requires more attention and care.
 
 
 
